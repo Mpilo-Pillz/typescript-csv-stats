@@ -4,3 +4,13 @@ Use when ever a small fixed set of values that are all closely related and known
 In short you need to know the data ahead of time before you can use an enum, also it must not be too Brighton
 
 eg, you know the genders, sizes (s, m, l) ahead of time but you do not know the different song titles
+
+by convention we do not export anything our of index.ts
+
+row[0]    | row[1]| row[2] | row[3] | row[4] | row[5] | row[6] 
+11/08/2018,Watford,Brighton,  2,      0,        H,       J Moss
+
+row[5] as MatchResult casting it into our Enum this is known as type assertion
+
+i instance of Array()
+i type string

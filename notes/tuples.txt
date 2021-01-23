@@ -1,0 +1,13 @@
+.map((row: string[]): (Date | string | number | MatchResult) [] => {
+            return [
+                dateStringToDate(row[0]),
+                row[1],
+                row[2],
+                parseInt(row[3]),
+                parseInt(row[4]),
+                row[5] as MatchResult,
+                row[6]
+            ];
+
+            retrun syntax above is confusing, so we use tuples to fix that.
+            Basically bring strict order to array eg first itme must be a date, second a string, thrid a number..so forth
