@@ -1,0 +1,4 @@
+Classes we are never going to use to instantiate objects out of them
+
+inside abstract classes we can have implementations of methods or 
+empty methods that we promise to use (mplement) in the future and will b implemented by the child class

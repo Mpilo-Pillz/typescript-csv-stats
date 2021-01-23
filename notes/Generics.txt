@@ -1,0 +1,14 @@
+Generics are like function arguments, but for types in class/function definitions
+they allow us to define the type of a property/argument/return value at a future point
+used heavily when writing reusable code
+
+
+class HoldAnything<TypeOfData>{
+    data: TypeOfData;
+
+    add(a: TypeOfData): TypeOfData {
+        return a;
+    }
+}
+const hldNumber = new HoldAnything<number>();
+const holdString = new holdString<string>();
