@@ -1,0 +1,6 @@
+Used to signal to other engineers that the data is closely related
+Use when ever a small fixed set of values that are all closely related and known at compie time
+
+In short you need to know the data ahead of time before you can use an enum, also it must not be too Brighton
+
+eg, you know the genders, sizes (s, m, l) ahead of time but you do not know the different song titles
