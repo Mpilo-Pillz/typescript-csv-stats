@@ -9,13 +9,20 @@ var matches = fs_1.default.readFileSync('football.csv', {
 }).split('\n').map(function (row) {
     return row.split(',');
 });
+var MatchResult;
+(function (MatchResult) {
+    MatchResult["HomeWin"] = "H";
+    MatchResult["AwayWin"] = "A";
+    MatchResult["Draw"] = "D";
+})(MatchResult || (MatchResult = {}));
+;
 var manCityWins = 0;
 for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
     var match = matches_1[_i];
-    if (match[1] === 'Man City' && match[5] === 'H') {
+    if (match[1] === 'Man City' && match[5] === MatchResult.HomeWin) {
         manCityWins++;
     }
-    else if (match[2] === 'Man City' && match[5] === 'A') {
+    else if (match[2] === 'Man City' && match[5] === MatchResult.AwayWin) {
         manCityWins++;
     }
 }

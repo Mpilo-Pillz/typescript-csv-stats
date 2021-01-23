@@ -6,12 +6,18 @@ const matches = fs.readFileSync('football.csv', {
     return row.split(',')
 })
 
+enum MatchResult {
+    HomeWin = 'H',
+    AwayWin = 'A',
+    Draw = 'D'
+};
+
 let manCityWins = 0;
 
 for (let match of matches) {
-    if(match[1] === 'Man City' && match[5] === 'H') {
+    if(match[1] === 'Man City' && match[5] === MatchResult.HomeWin) {
         manCityWins++;
-    } else if (match[2] === 'Man City' && match[5] === 'A') {
+    } else if (match[2] === 'Man City' && match[5] === MatchResult.AwayWin) {
         manCityWins++;
     }
 }
